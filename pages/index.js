@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import { blogPosts } from '../lib/data';
 
 
 export default function Home() {
@@ -13,6 +14,15 @@ export default function Home() {
       <main className="">
         <h1 className="">Welcome to Ramon's Next.JS tutorial!</h1>
       </main>
+      <div>
+        {blogPosts.map((item) => (
+          <div>
+            <div>{item.title}</div>
+            <div>{item.date.toString}</div>
+            <div>{item.content}</div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
