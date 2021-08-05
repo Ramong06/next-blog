@@ -18,9 +18,11 @@ export default function BlogPage({ title, date, content }) {
 };
 
 export async function getStaticProps(context) {  //Add First
-    console.log(context);
+    console.log('yo, yo', context);
+    const { params } = context;
     return {
-        props: {}, // This will be passed to the page component as props
+        // Write this after creating const { params } = context;
+        props: blogPosts.find((item) => item.slug === params.slug), // This will be passed to the page component as props
     }
 };
 
