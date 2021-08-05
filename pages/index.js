@@ -13,14 +13,14 @@ export default function Home() {
       </Head>
 
       <main className="">
-        <h1 className="">Welcome to Ramon's Next.JS tutorial!</h1>
+        <h1 className="p-5 mt-3 text-4xl">Welcome to Ramon's Next.JS tutorial!</h1>
       </main>
-      <div>
+      <div className="p-5">
         {blogPosts.map((item) => (
-          <div key={item.slug}>
+          <div key={item.slug} className="p-5">
             <div>
               <Link href={`/blog/${item.slug}`}>
-                <a>{item.title}</a>
+                <a className="underline text-2xl">{item.title}</a>
               </Link>
               </div>
             <div>{item.date.toString()}</div>
