@@ -12,6 +12,7 @@ export default function BlogPage({ title, date, content }) {
 
       <main className="">
         <h1 className="">{title}</h1>
+        <div>{content}</div>
       </main>
     </div>
   );
